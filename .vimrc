@@ -8,11 +8,13 @@ vmap <C-c> "+y
 " "去空行  
 nnoremap <F2> :g/^\s*$/d<CR> 
 " "比较文件  
-nnoremap <C-F2> :vert diffsplit 
+nnoremap <M-F2> :vert diffsplit % 
 " "新建标签  
 map <F4> :tabnew<CR>  
+map <C-s> :w<CR> echo "saved"<CR>
 "custom config
-let g:auto_save=1
+"let g:auto_save=1
+set mouse=a
 syntax on
 colo skeletor
 set nu
@@ -24,12 +26,10 @@ set smarttab
 set autoread
 set noswapfile
 set cindent
-set autoindent
 set cursorline              " 突出显示当前行
 set magic                   " 设置魔术
 set guioptions-=T           " 隐藏工具栏
 set guioptions-=m           " 隐藏菜单栏
-set smartindent
 set background=dark	
 set ruler
 set showmatch
@@ -146,6 +146,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 Plugin 'https://github.com/907th/vim-auto-save.git'
 Plugin 'https://github.com/scrooloose/nerdtree'
+Plugin 'https://github.com/skreek/skeletor.vim.git'
 nnoremap <F3> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plugin 'https://github.com/bling/vim-airline'
